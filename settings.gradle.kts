@@ -9,11 +9,14 @@
  */
 
 rootProject.name = "CAP"
-include("plugin")
 include(":app")
 pluginManagement {
     repositories {
         mavenCentral()
         gradlePluginPortal()
+        mavenLocal()
+    }
+    plugins {
+
     }
 }

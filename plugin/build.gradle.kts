@@ -4,8 +4,12 @@ plugins {
     `kotlin-dsl`
 }
 
+
 repositories {
+    google()
     mavenCentral()
+    mavenLocal()
+    maven { url = uri("https://plugins.gradle.org/m2/") }
 }
 
 dependencies {
@@ -44,6 +48,7 @@ gradlePlugin {
     // Define the plugin
     val greeting by plugins.creating {
         id = "kz.dkgroup.cap.greeting"
+        group = "kz.dkgroup"
         implementationClass = "kz.dkgroup.cap.CAPPlugin"
     }
 }
